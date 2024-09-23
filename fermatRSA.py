@@ -45,7 +45,7 @@ def decode(ciphertext, p, q, exponent):
 
 # Parámetros RSA
 p = 1000000007
-q = 1000000009
+q = 1822222109
 e = 23917
 modulo = p * q
 
@@ -56,7 +56,7 @@ ciphertext = encode(m, modulo, e)
 
 # Intento de factorizar el módulo con Fermat
 print("Intentando factorizar el módulo con Fermat...")
-p_fact, q_fact = fermatFactor(modulo)
+p_fact, q_fact = fermatFactor(2047)
 print(f"Factores encontrados: p = {p_fact}, q = {q_fact}")
 
 # Intento de descifrar usando los factores encontrados
