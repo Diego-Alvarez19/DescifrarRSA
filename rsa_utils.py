@@ -54,6 +54,38 @@ def method_pollard(N): #max_iterations=50000
             return method_pollard(N)
 
     return d, N // d
+
+#################Metodo de Primos pequenos########################
+# Método de Criba de Eratóstenes para generar primos pequeños
+def sieve_of_eratosthenes(limit):
+    """Genera una lista de números primos hasta un límite dado usando la Criba de Eratóstenes."""
+    is_prime = [True] * (limit + 1)
+    p = 2
+    while (p * p <= limit):
+        if (is_prime[p]):
+            for i in range(p * p, limit + 1, p):
+                is_prime[i] = False
+        p += 1
+    return [p for p in range(2, limit + 1) if is_prime[p]]
+
+# Método de factorización por primos pequeños
+def small_prime_factorization(n):
+    """Factoriza n utilizando la división por primos."""
+    factors = []
+    primes = sieve_of_eratosthenes(int(n**0.5) + 1)  # Solo necesitamos primos hasta sqrt(n)
+
+    for prime in primes:
+        while n % prime == 0:  # Mientras n sea divisible por prime
+            factors.append(prime)  # Agregar el factor
+            n //= prime  # Dividir n por el primo
+        if n == 1:  # Si n se convierte en 1, hemos terminado
+            break
+
+    if n > 1:  # Si queda un número mayor que 1, es un primo
+        factors.append(n)
+
+    return factors
+
     
 # Calculo de d
 def extended_gcd(a, b):

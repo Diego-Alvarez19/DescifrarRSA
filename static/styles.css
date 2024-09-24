@@ -59,7 +59,7 @@ button {
     margin-top: 20px;
     width: 96%;
     padding: 10px;
-    background-color: rgb(0, 255, 21);
+    background-color: rgb(8, 87, 14);
     color: white;
     border: none;
     border-radius: 5px;
@@ -75,3 +75,15 @@ button:hover {
     color: white;
     margin-top: 20px;
 } 
+
+.decrypted-message {
+    background-color: #f1f1f1; /* Color de fondo */
+    padding: 15px;            /* Espaciado interno */
+    margin-top: 10px;          /* Separación superior */
+    border: 1px solid #ccc;    /* Borde gris claro */
+    border-radius: 5px;        /* Bordes redondeados */
+    color: #333;               /* Color del texto */
+    font-family: "Courier New", monospace; /* Fuente de estilo de terminal */
+    word-wrap: break-word;     /* Asegura que el texto largo no desborde */
+    max-width: 96%;
+}
