@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Decryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>RSA Decryption Tool</h1>
+        <form action="/decrypt" method="POST">
+            <label for="n">n (modulus):</label>
+            <input type="text" id="n" name="n" required>
+
+            <label for="e">e (public exponent):</label>
+            <input type="text" id="e" name="e" required>
+
+            <label for="ciphertext">Ciphertext (use ␟ as separator):</label>
+            <textarea id="ciphertext" name="ciphertext" required></textarea>
+
+            <label for="method">Decryption Method:</label>
+            <select id="method" name="method">
+                <option value="fermat">Fermat's Factorization</option>
+
+
+                
+                <!-- ACA SE DEBE INGRESAR LA OPCIÓN DE LA IMPLEMETACIÓN QUE SE AGREGO -->
+                <option value="trial_division">Trial Division Factorization</option>
+            </select>
+
+            <button type="submit">Decrypt</button>
+        </form>
+
+        {% if decrypted_message %}
+            <h2>Decrypted Message:</h2>
+            <p>{{ decrypted_message }}</p>
+            <h3>Details:</h3>
+            <p><strong>p:</strong> {{ p }}</p>
+            <p><strong>q:</strong> {{ q }}</p>
+            <p><strong>d:</strong> {{ d }}</p>
+        {% elif error %}
+            <p class="error">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
