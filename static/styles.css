@@ -1,54 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     height: auto;
     min-height: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(#ecf0f1, blue);
-    color: white;
+    color: rgb(0, 0, 0);
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430);
 }
-
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #03071e;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    max-width: 65%;
+    margin: 100px auto;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    /* background: url(fondo.png), #7b4397;
+    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
+    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430); */
+    background-color: rgb(217, 203, 254);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #000000;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
 }
+
 
 label {
     display: block;
     margin-top: 10px;
+    color: rgb(0, 0, 153);
 }
 
-input, textarea {
+input, textarea, select {
     width: 96%;
-    padding: 10px;
+    padding: 7px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-select{
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #270b6f;
+    border-radius: 7px;
 }
 
 button {
     margin-top: 20px;
-    width: 100%;
+    width: 96%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: rgb(0, 255, 21);
     color: white;
     border: none;
     border-radius: 5px;
@@ -56,10 +67,11 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: blue;
+    color: white;
 }
 
 .error {
-    color: red;
+    color: white;
     margin-top: 20px;
-}
+} 
