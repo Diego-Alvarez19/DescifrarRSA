@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from rsa_utils import fermat_factor, mod_inverse, decrypt_message
+from rsa_utils import fermat_factor, method_pollard, calc_d, decrypt_message
 
 app = Flask(__name__)
 
@@ -20,14 +20,14 @@ def decrypt():
             p, q = fermat_factor(n)
             
             
-        # ACA SE DEBE PONER LA OPCIÓN DEL METODO TAMBIEN
-        elif method == "trial_division":
-            p, q = trial_division_factor(n)
-        else:
-            return render_template('index.html', error="Invalid decryption method selected.")
+        # Factorización por método de pollard
+        elif method == "pollard":
+            p, q = method_pollard(n)
+
+            #return render_template('index.html', error="Se seleccionó un método de descifrado no válido.")
 
         phi_n = (p - 1) * (q - 1)
-        d = mod_inverse(e, phi_n)
+        d = calc_d(e, phi_n)
 
         # Descifrar el mensaje
         message = decrypt_message(ciphertext, d, n)
