@@ -30,11 +30,10 @@ def gcd(a, b):
 def funtion_factor(N, x):
     return (pow(x, 2) + 1) % N
 
-def method_pollard(N): #max_iterations=50000
-    x = (random.randint(0, 2) % (N - 2))
+def method_pollard(N): 
+    x = random.randint(1, N-1)
     y = x
     d = 1
-    #iteration = 0
 
     while d == 1:
         #Función iterativa aplicada a x y y
@@ -43,17 +42,11 @@ def method_pollard(N): #max_iterations=50000
 
         # Calcula el MCD de la diferencia entre x e y
         d = gcd(abs(x - y), N)
-        #iteration += 1 
-
-        '''if iteration >= max_iterations:
-            print(f"No se pudo encontrar un factor después de {max_iterations} iteraciones.")
-            return 'failure' '''
-        # retry if the algorithm fails to find prime factor
-        # with chosen x and c 
-        if (d == N):
-            return method_pollard(N)
-
-    return d, N // d
+    
+    if (d == N):
+        return 'failure'
+    else:
+        return d, N // d #Retorna los dos factores no triviales de n
 
 #################Metodo de Primos pequenos########################
 # Método de Criba de Eratóstenes para generar primos pequeños
