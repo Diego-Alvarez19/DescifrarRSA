@@ -79,3 +79,26 @@ y primos aleatorios fuertes no es vulnerable a estos métodos.
 - Factorización de Fermat
 - Algoritmo Rho de Pollard
 - Criba de Eratóstenes
+
+---
+
+## 🖥️ Capturas de pantalla
+
+**Ingreso de parámetros — clave pública `(n, e)` y mensaje cifrado:**
+
+![Parámetros de entrada](static/screenshots/parametros.png)
+
+**Resultado — factores `p`, `q`, clave privada `d` y mensaje descifrado:**
+
+![Salida del sistema](static/screenshots/salida.png)
+
+---
+
+## 🎥 Demostración con Wireshark
+
+En el siguiente video se muestra el flujo completo del ataque:
+captura de tráfico de red con **Wireshark** para interceptar los parámetros 
+RSA (`n` y `e`) y el mensaje cifrado, seguido del proceso de descifrado 
+con la herramienta.
+
+[![Ver demostración en YouTube](https://img.shields.io/badge/YouTube-Ver%20demo-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=Qp9siFRAvuY)
