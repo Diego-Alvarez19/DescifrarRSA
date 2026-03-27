@@ -1,3 +1,4 @@
+# English version
 # DecryptRSA 🔐
 Educational web tool to analyze vulnerabilities in weak RSA algorithm
 implementations, using modulus `n` factorization techniques.
@@ -92,7 +93,7 @@ process using the tool.
 [![Watch demo on YouTube](https://img.shields.io/badge/YouTube-Watch%20demo-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=Qp9siFRAvuY)
 
 ------------------------------------------
-
+# Version en Español
 # DescifrarRSA 🔐
 
 Herramienta educativa web para analizar vulnerabilidades en implementaciones 
