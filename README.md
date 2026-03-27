@@ -86,11 +86,11 @@ y primos aleatorios fuertes no es vulnerable a estos métodos.
 
 **Ingreso de parámetros — clave pública `(n, e)` y mensaje cifrado:**
 
-![Parámetros de entrada](static/screenshots/parametros.png)
+![Parámetros de entrada](static/screenshots/rsa_1.png)
 
 **Resultado — factores `p`, `q`, clave privada `d` y mensaje descifrado:**
 
-![Salida del sistema](static/screenshots/salida.png)
+![Salida del sistema](static/screenshots/rsa_2.png)
 
 ---
 
